@@ -11,7 +11,7 @@ epoch = 1000
 
 # input pipeline
 
-img_dir = "./maps/"
+img_dir = "./merged/"
 img_data = dset.ImageFolder(root=img_dir, transform = transforms.Compose([
                                             transforms.Scale(size=img_size),
                                             transforms.CenterCrop(size=(img_size,img_size*2)),
@@ -73,7 +73,7 @@ for i in range(epoch):
             print(i)
             print(loss)
             #print(y.size())
-            v_utils.save_image(x[0].cpu().data,"./result/satel_image_{}_{}.png".format(i,_))
-            v_utils.save_image(y_[0].cpu().data,"./result/map_image_{}_{}.png".format(i,_))
+            v_utils.save_image(x[0].cpu().data,"./result/original_image_{}_{}.png".format(i,_))
+            v_utils.save_image(y_[0].cpu().data,"./result/label_image_{}_{}.png".format(i,_))
             v_utils.save_image(y[0].cpu().data,"./result/gen_image_{}_{}.png".format(i,_))
             torch.save(fusion,"./model/fusion.pkl")    
