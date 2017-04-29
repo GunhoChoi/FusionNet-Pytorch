@@ -21,6 +21,7 @@ mkdir model
 ~~~
 python3 main.py
 ~~~
+Out of memory error -> change batch size or out_dim
 
 ## Result
 
