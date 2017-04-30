@@ -38,3 +38,7 @@ Out of memory error -> change batch size or out_dim
 <img src="./result/satel_image_0_0.png" width="20%"><img src="./result/map_image_0_0.png" width="20%"><img src="./result/gen_image_0_0.png" width="20%">
 
 Original Image / Label Image / Generated Image
+
+## Related Works
+
+- [FusionNet in Tensorflow by Hyungjoo Andrew Cho](https://github.com/NySunShine/fusion-net)
