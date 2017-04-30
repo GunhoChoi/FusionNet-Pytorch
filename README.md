@@ -24,8 +24,8 @@ mkdir model
 
 ## Train Model
 ~~~
-python3 main.py  ->  medical image without augmentation
-python3 main_augmented.py  ->  map image with naive augmentation
+python3 main.py  -> medical image without augmentation
+python3 main_augmented.py  -> map image with naive augmentation
 ~~~
 Out of memory error -> change batch size or out_dim
 
