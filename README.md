@@ -2,6 +2,12 @@
 
 [FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics](https://arxiv.org/abs/1612.05360)
 
+## Requirements
+
+- Pytorch 0.1.11
+- Python 3.5.2
+- wget
+
 ## Download code
 
 ~~~
