@@ -27,7 +27,7 @@ mkdir model
 python3 main.py  -> medical image without augmentation
 python3 main_augmented.py  -> map image with naive augmentation
 ~~~
-Out of memory error -> change batch size or out_dim at FusionNet.py
+Out of memory error -> change batch size or out_dim
 
 ## Result
 
