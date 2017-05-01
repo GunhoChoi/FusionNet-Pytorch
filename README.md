@@ -40,6 +40,10 @@ Out of memory error -> change batch_size / img_size / out_dim
 ### Medical Image
 <img src="./result/original_image_185_0.png" width="20%"><img src="./result/label_image_185_0.png" width="20%"><img src="./result/gen_image_185_0.png" width="20%">
 
+### Map Image 
+
+under further testing..
+
 Original Image / Label Image / Generated Image
 
 ## Related Works
