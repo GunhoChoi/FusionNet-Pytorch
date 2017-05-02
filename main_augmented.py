@@ -63,6 +63,6 @@ for i in range(epoch):
 
             v_utils.save_image(x.cpu().data,"./result/satel_image_{}_{}.png".format(i,j))
             v_utils.save_image(y.cpu().data,"./result/map_image_{}_{}.png".format(i,j))
-            v_utils.save_image(y.cpu().data,"./result/gen_image_{}_{}.png".format(i,j))
+            v_utils.save_image(y_.cpu().data,"./result/gen_image_{}_{}.png".format(i,j))
             
             torch.save(fusion,"./model/fusion.pkl")    
