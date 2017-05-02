@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 batch_size = 16
 img_size = 512
 slice_size = 256
-lr = 0.0002
+lr = 0.00005
 epoch = 200
 
 # input pipeline
@@ -43,8 +43,8 @@ for i in range(epoch):
     for j,(image,label) in enumerate(img_batch):
         satel_image, map_image = torch.chunk(image, chunks=2, dim=3) 
         
-        for h in range(slice_size):
-            for w in range(slice_size):
+        for h in range(0,img_size-slice_size,slice_size//4):
+            for w in range(0,img_size-slice_size,slice_size//4):
 
                 satel_img = satel_image[:,:,h:h+slice_size,w:w+slice_size]
                 map_img = map_image[:,:,h:h+slice_size,w:w+slice_size]
@@ -59,10 +59,10 @@ for i in range(epoch):
                 loss.backward()
                 optimizer.step()
 
-            print(loss)
+        print(loss)
 
-            v_utils.save_image(x.cpu().data,"./result/satel_image_{}_{}.png".format(i,j))
-            v_utils.save_image(y.cpu().data,"./result/map_image_{}_{}.png".format(i,j))
-            v_utils.save_image(y_.cpu().data,"./result/gen_image_{}_{}.png".format(i,j))
-            
-            torch.save(fusion,"./model/fusion.pkl")    
+        v_utils.save_image(x.cpu().data,"./result/satel_image_{}_{}.png".format(i,j))
+        v_utils.save_image(y_.cpu().data,"./result/map_image_{}_{}.png".format(i,j))
+        v_utils.save_image(y.cpu().data,"./result/gen_image_{}_{}.png".format(i,j))
+        
+        torch.save(fusion,"./model/fusion.pkl")    
