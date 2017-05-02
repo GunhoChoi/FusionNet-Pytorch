@@ -42,7 +42,11 @@ Out of memory error -> change batch_size / img_size / out_dim
 
 ### Map Image 
 
-under further testing..
+<img src="./result/satel_image_31_41.png" width="100%">
+
+<img src="./result/map_image_31_41.png" width="100%">
+
+<img src="./result/gen_image_31_41.png" width="100%">
 
 Original Image / Label Image / Generated Image
 
