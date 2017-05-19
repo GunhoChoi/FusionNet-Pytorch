@@ -1,18 +1,21 @@
 # FusionNet_Pytorch
 
-[FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics](https://arxiv.org/abs/1612.05360)
+## Model
+
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
+- [FusionNet: A deep fully residual convolutional neural network for image segmentation in connectomics](https://arxiv.org/abs/1612.05360)
 
 ## Requirements
 
-- Pytorch 0.1.11
+- Pytorch 0.1.12
 - Python 3.5.2
 - wget
 
 ## Download code
 
 ~~~
-git clone https://github.com/GunhoChoi/FusionNet_Pytorch
-cd FusionNet_Pytorch
+git clone https://github.com/GunhoChoi/Kind_PyTorch_Tutorial.git
+cd /Kind_PyTorch_Tutorial/13_Semantic_Segmentation
 ~~~
 
 ## Download Map data
@@ -22,34 +25,18 @@ wget https://people.eecs.berkeley.edu/~tinghuiz/projects/pix2pix/datasets/maps.t
 tar -xzvf maps.tar.gz
 ~~~
 
-## Make model directory
+## Make required directory
 
 ~~~
 mkdir model
+mkdir result
 ~~~
 
 ## Train Model
 ~~~
-python3 main.py  -> medical image without augmentation
-python3 main_augmented.py  -> map image with naive augmentation
+python3 main.py --network unet --batch_size 1 --num_gpu 1
 ~~~
-Out of memory error -> change batch_size / img_size / out_dim
 
 ## Result
 
-### Medical Image
-<img src="./result/original_image_185_0.png" width="20%"><img src="./result/label_image_185_0.png" width="20%"><img src="./result/gen_image_185_0.png" width="20%">
-
-### Map Image 
-
-<img src="./result/satel_image_31_41.png" width="100%">
-
-<img src="./result/map_image_31_41.png" width="100%">
-
-<img src="./result/gen_image_31_41.png" width="100%">
-
-Original Image / Label Image / Generated Image
-
-## Related Works
-
-- [FusionNet in Tensorflow by Hyungjoo Andrew Cho](https://github.com/NySunShine/fusion-net)
+under training..
