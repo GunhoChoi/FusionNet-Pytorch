@@ -22,7 +22,7 @@ img_batch = data.DataLoader(img_data, batch_size=batch_size,
 
 # initiate FusionNet
 
-fusion = nn.DataParallel(FusionGenerator(3,3,3)).cuda()
+fusion = nn.DataParallel(FusionGenerator(3,3,16)).cuda()
 
 try:
     fusion = torch.load('./model/fusion.pkl')
